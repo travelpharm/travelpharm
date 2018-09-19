@@ -3,22 +3,23 @@
 <head>
 <script>
 function add(){
-var a,b,c;\=
+var a,b,c;
 a=Number(document.getElementById("people").value);
 b=Number(document.getElementById("time").value);
 c=Number(document.getElementById("spares").value);
-d=Math.ceil(b+9)*a-c;
-document.getElementById("answer").value= d
+d=Math.ceil(b+30)*a-c;
+document.getElementById("answer").value=d
+;
 }
 </script>
 </head>
 <h1>
-Malarone Tablet Calculator
+Doxycycline Capsule Calculator
 </h1>
 <body>
-<p>Number of people (over 40kg) travelling: <input id="people"></p>
+<p>Number of people (over 12 years old) travelling: <input id="people"></p>
 <p>Number of consecutive days at risk?: <input id="time"></P>
-<p>Do you have any spare tablets, if so how many?: <input id="spares"></p>
+<p>Do you have any spare capsules, if so how many?: <input id="spares"></p>
 <button onclick="add()">You need to order:</button>
 <input id="answer">tablets
 </body>
