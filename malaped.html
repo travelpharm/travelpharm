@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="style1.css">
+<script>
+//function malpaed works out number of tablets needed for a holiday
+function malpaed(){
+//the following variables are assigned and values drawn as numbers, denoted by numbers prefix from html input id
+var weight, spares, days 
+weight = Number(document.getElementById("weight").value); 
+spares = Number(document.getElementById("spares").value);
+days = Number(document.getElementById("days").value);
+
+// not suitable for all weights so if statement to alert fro low and high ranges with number of tablets needed assigned to the tablets variable in the statement
+
+if (weight < 7.5) {alert("This product is not suitable for children under 7.5kg, Please phone TravelPharm for advice")}
+else if (weight < 10) {tablets="0.5";}
+else if (weight < 20) {tablets="1";}
+else if (weight < 30) {tablets="2";}
+else if (weight < 40) {tablets="3";}
+else {alert("This product is only suitable for children up to 39kg.  If your child is 40kg or over they will need the adult Atovaquone/Proguanil 250/125mg");}
+
+//total calculated with math.ceil to round up to nearest whole integer, totall variable calculated and then assigned  to html id answer
+total = Math.ceil((days+9)*tablets)-spares;
+document.getElementById("answer").value=total;
+}
+
+</script>
+</head>
+<h1> </h1>
+<h2>
+Malarone Paediatric Calculator
+</h2>
+<body>
+<p>Weight of child: <input id="weight"></p>
+<p>Number of consecutive days at risk?: <input id="days"></P>
+<p>Do you have any spare capsules, if so how many?: <input id="spares"></p>
+<button onclick="malpaed()">You need to order:</button>
+<input id="answer">tablets
+</body>
+</html>
