@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function add(){
+var a,b,c;
+a=Number(document.getElementById("people").value);
+b=Number(document.getElementById("time").value);
+c=Number(document.getElementById("spares").value);
+d=((b+38)/7)*a-c;
+document.getElementById("answer").value= Math.ceil(d)
+;
+}
+</script>
+</head>
+<h1>
+Lariam Tablet Calculator (Adult)
+</h1>
+<body>
+<p>Number of people (over 45kg) travelling: <input id="people"></p>
+<p>Number of consecutive days at risk?: <input id="time"></P>
+<p>Do you have any spare tablets, if so how many?: <input id="spares"></p>
+<button onclick="add()">You need to order:</button>
+<input id="answer">tablets
+</body>
+</html>
+}
