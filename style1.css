@@ -1,5 +1,5 @@
 h1 {
-    background-color: "rgb(73, 143, 255)";
+    background-color: rgb(73, 143, 255);
     font-family: "Arial Black", Gadget, sans-serif      
 }
 
@@ -9,9 +9,6 @@ img {
     padding: 5px;
     width: 150px;
 }
-
-<img src="TPlogo.png" alt="tplogo">
-   
 
 body {background-color: white}
 
