@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(73, 143, 255);
-    font-family: "Arial Black", Gadget, sans-serif      
+    background-color: rgb(210, 222, 242);
+    font-family: "Arial Black", Gadget, sans-serif
 }
 
 img {
@@ -10,5 +10,22 @@ img {
     width: 360px;
 }
 
-
-    
+a:link {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
