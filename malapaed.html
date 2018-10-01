@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
-
+<head>
 <script>
 //function malpaed works out number of tablets needed for a holiday
 function malpaed(){
 //the following variables are assigned and values drawn as numbers, denoted by numbers prefix from html input id
-var weight, spares, days 
-weight = Number(document.getElementById("weight").value); 
+var weight, spares, days
+weight = Number(document.getElementById("weight").value);
 spares = Number(document.getElementById("spares").value);
 days = Number(document.getElementById("days").value);
 
@@ -20,12 +20,12 @@ else if (weight < 40) {tablets="3";}
 else {alert("This product is only suitable for children up to 39kg.  If your child is 40kg or over they will need the adult Atovaquone/Proguanil 250/125mg");}
 
 //total calculated with math.ceil to round up to nearest whole integer, totall variable calculated and then assigned  to html id answer
-total = Math.ceil((days+9)*tablets)-spares;
+total = Math.ceil(((days+9)*tablets)-spares);
 document.getElementById("answer").value=total;
 }
 
 </script>
-<head>
+
 <link rel="stylesheet" type="text/css" href="style1.css">
 </head>
 <h1><img src="TPlogo.png" alt="TPlogo" width="360" height="110">  </h1>
