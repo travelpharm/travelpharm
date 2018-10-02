@@ -10,7 +10,7 @@
 <div class="w3-row">
   <div class="w3-half w3-black w3-container w3-center" style="height:700px">
     <div class="w3-padding-64">
-      <h1>img src="TPlogo.png" alt=TPlogo</h1>
+      <h1><img src="TPlogo.png" alt=TPlogo></h1>
     </div>
     <div class="w3-padding-64">
       <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
@@ -22,49 +22,56 @@
   <div class="w3-half w3-blue-grey w3-container" style="height:700px">
     <div class="w3-padding-64 w3-center">
       <h1>About Me</h1>
-      <img src="TPlogo.png" class="w3-margin w3-circle" alt="Person" style="width:50%">
+      <img src="TPlogo.png" alt="TPlogo" style="width:50%">
       <div class="w3-left-align w3-padding-large">
-        <p>Lorem ipusm sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-        <p>Lorem ipusm sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+        <p>Travelpharm have been keeping travellers safe for over 10 years!/p>
+        <p>This is the home of our branch based resource centre.  Carefully crafted Calculators
+        and a dedicated branch resource centre with links to documents</p>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Second Grid: Work & Resume -->
+<script>
+//function malpaed works out number of tablets needed for a holiday
+function malpaed(){
+//the following variables are assigned and values drawn as numbers, denoted by numbers prefix from html input id
+var weight, spares, days
+weight = Number(document.getElementById("weight").value);
+spares = Number(document.getElementById("spares").value);
+days = Number(document.getElementById("days").value);
+
+// not suitable for all weights so if statement to alert fro low and high ranges with number of tablets needed assigned to the tablets variable in the statement
+
+if (weight < 7.5) {alert("This product is not suitable for children under 7.5kg, Please phone TravelPharm for advice")}
+else if (weight < 10) {tablets="0.5";}
+else if (weight < 20) {tablets="1";}
+else if (weight < 30) {tablets="2";}
+else if (weight < 40) {tablets="3";}
+else {alert("This product is only suitable for children up to 39kg.  If your child is 40kg or over they will need the adult Atovaquone/Proguanil 250/125mg");}
+
+//total calculated with math.ceil to round up to nearest whole integer, totall variable calculated and then assigned  to html id answer
+total = Math.ceil(((days+9)*tablets)-spares);
+document.getElementById("answer").value=total;
+}
+
+</script>
 <div class="w3-row">
   <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
     <div class="w3-padding-64">
-      <h2>My Work</h2>
-      <p>Some of my latest projects.</p>
-    </div>
-    <div class="w3-row">
-      <div class="w3-half">
-        <img src="/w3images/coffee.jpg" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <img src="/w3images/workbench.jpg" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-row w3-hide-small">
-      <div class="w3-half">
-        <img src="/w3images/workbench.jpg" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <img src="/w3images/coffee.jpg" style="width:100%">
-      </div>
-    </div>
+    <h2>
+      Malarone Paediatric Calculator
+    </h2>
+      <p>Weight of child: <input id="weight"></p>
+      <p>Number of consecutive days at risk?: <input id="days"></P>
+      <p>Do you have any spare capsules, if so how many?: <input id="spares"></p>
+      <button onclick="malpaed()">You need to order:</button>
+      <input id="answer">tablets
+      </p>
 
-    <div class="w3-row w3-hide-small">
-      <div class="w3-half">
-        <img src="/w3images/sound.jpg" style="width:100%">
-      </div>
-      <div class="w3-half">
-        <img src="/w3images/workbench.jpg" style="width:100%">
-      </div>
-    </div><br>
-    <p>Just call me awesome.</p>
-  </div>
+
+
   <div class="w3-half w3-indigo w3-container" style="min-height:800px">
     <div class="w3-padding-64 w3-center">
       <h2>Resume</h2>
