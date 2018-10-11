@@ -19,7 +19,7 @@ else if (weight < 30) {tablets="2";}
 else if (weight < 40) {tablets="3";}
 else {alert("This product is only suitable for children up to 39kg.  If your child is 40kg or over they will need the adult Atovaquone/Proguanil 250/125mg");}
 
-//total calculated with math.ceil to round up to nearest whole integer, totall variable calculated and then assigned  to html id answer
+//total calculated with math.ceil to round up to nearest whole integer, total variable calculated and then assigned  to html id answer
 total = Math.ceil(((days+9)*tablets)-spares);
 document.getElementById("answer").value=total;
 }
@@ -33,10 +33,12 @@ document.getElementById("answer").value=total;
 Malarone Paediatric Calculator
 </h2>
 <body>
-<p>Weight of child: <input id="weight"></p>
+<p>Weight of child (kg): <input id="weight"></p>
 <p>Number of consecutive days at risk?: <input id="days"></P>
 <p>Do you have any spare capsules, if so how many?: <input id="spares"></p>
 <button onclick="malpaed()">You need to order:</button>
 <input id="answer">tablets
+</p>
+<a href="index.html">Home</a>
 </body>
 </html>
