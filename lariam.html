@@ -4,10 +4,17 @@
 <script>
 function add(){
 var a,b,c;
-a=Number(document.getElementById("people").value);
+a=Number(document.getElementById("weight").value);
 b=Number(document.getElementById("time").value);
 c=Number(document.getElementById("spares").value);
-d=((b+38)/7)*a-c;
+
+if (weight < 6) {alert("This product is not licensed for children under 6kg, Please phone TravelPharm for advice as this product may still be suitable")}
+else if (a < 16) {tablets="0.25";}
+else if (a < 25) {tablets="0.5";}
+else if (a < 45) {tablets="0.75";}
+else {tablets="1";}
+
+d=((b+38)/7)*tablets-c;
 document.getElementById("answer").value= Math.ceil(d)
 ;
 }
@@ -18,10 +25,10 @@ document.getElementById("answer").value= Math.ceil(d)
   <img src="TPlogo.png" alt="TPlogo" width="360" height="110">
 </head>
 <h2>
-Lariam Tablet Calculator (Adult)
+Lariam Tablet Calculator
 </h2>
 <body>
-<p>Number of people (over 45kg) travelling: <input id="people"></p>
+<p>Weight of traveller (kg) <input id="weight"></p>
 <p>Number of consecutive days at risk?: <input id="time"></P>
 <p>Do you have any spare tablets, if so how many?: <input id="spares"></p>
 <button onclick="add()">You need to order:</button>
