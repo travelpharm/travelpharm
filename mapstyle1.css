@@ -1,0 +1,71 @@
+
+#delivery_map_container
+    {position:relative;
+        width:auto;
+        height:auto;
+        background:url("/travelpharm/delivery_map.jpg") no-repeat transparent;
+        margin:5px 0 0 93px; overflow:hidden;
+        margin-bottom:5px}
+        
+#delivery_map_container.destination1
+    {background-position:0 -2000px}
+#delivery_map_container.destination2
+    {background-position:0 -1200px}
+#delivery_map_container.destination3
+    {background-position:0 -400px}
+#delivery_map_container.destination4
+    {background-position:0 -800px}
+#delivery_map_container.destination5
+    {background-position:0 -1600px}
+#delivery_map_container.destination6
+    {background-position:0 -2400px}
+#delivery_map_container.destination7
+    {background-position:0 -2806px}
+    
+.destinationpopup
+    {position:absolute;
+        height:auto;
+        width:195px;
+        background:#fff;
+        display:none;
+        border:4px solid #e6e6e6;
+        font-family: "Arial", Helvetica Times, sans-serif;
+        font-size:11px;color:#646464}
+        
+.destinationpopup p
+    {padding:7px;
+        margin:0}
+        
+.destinationpopup span.country_name
+    {font-size:14px;
+        font-weight:bold;
+        color:#000000;
+        text-transform:uppercase;
+        display:block;
+        padding-bottom:5px}
+        
+.destination1popup
+    {left:310px; top:90px}
+        
+.destination2popup{left:400px;top:80px}
+
+.destination3popup{left:100px;top:130px}
+
+.destination4popup{left:231px;top:271px}
+
+.destination5popup{left:400px;top:229px}
+
+.destination6popup{left:507px;top:132px}
+
+.destination7popup{left:510px;top:340px}
+
+.country_name a{color:#4286f4}
+
+.desktopHide {display: none}
+
+
+@media screen and (max-width: 850px) {
+    .mobileHide {
+      display: none;}
+    .desktopHide {display:block;}
+}
