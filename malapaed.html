@@ -1,48 +1,203 @@
 <!doctype html>
-<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
 <script>
 //function malpaed works out number of tablets needed for a holiday
-function malpaed(){
+function malapaed1(){
+
 //the following variables are assigned and values drawn as numbers, denoted by numbers prefix from html input id
-var weight, spares, days
-weight = Number(document.getElementById("weight").value);
-spares = Number(document.getElementById("spares").value);
+var weight1, spares, days, tablets
+weight1 = Number(document.getElementById("weight1").value);
 days = Number(document.getElementById("days").value);
 
 // not suitable for all weights so if statement to alert fro low and high ranges with number of tablets needed assigned to the tablets variable in the statement
 
-if (weight < 10) {alert("This product is not licensed for children under 10kg, Please phone TravelPharm for advice as this product may still be suitable")}
-else if (weight < 10) {tablets="0.5";}
-else if (weight < 20) {tablets="1";}
-else if (weight < 30) {tablets="2";}
-else if (weight < 40) {tablets="3";}
-else {alert("This product is only suitable for children up to 39kg.  If your child is 40kg or over they will need the adult Atovaquone/Proguanil 250/125mg");}
+if (weight1 === 0) {tablets="0";}
+else if (weight1 < 10) {alert("Child 1: This product is not licensed for children under 10kg, Please phone TravelPharm for advice as this product may still be suitable")}
+else if (weight1 < 20) {tablets="1";}
+else if (weight1 < 30) {tablets="2";}
+else if (weight1 < 40) {tablets="3";}
+else {alert("Child 1: This product is only suitable for children up to 39.9kg.  If your child is 40kg or over they will need the adult Atovaquone/Proguanil 250/125mg");}
 
-//total calculated with math.ceil to round up to nearest whole integer, total variable calculated and then assigned  to html id answer
-total = Math.ceil(((days+9)*tablets)-spares);
-document.getElementById("answer").value=total;
+total1= (days+9)*tablets;
+return total1;
+}
+
+function malapaed2(){
+
+var weight2, spares, days, tablets2
+weight2 = Number(document.getElementById("weight2").value);
+days = Number(document.getElementById("days").value);
+
+// not suitable for all weights so if statement to alert fro low and high ranges with number of tablets needed assigned to the tablets variable in the statement
+
+if (weight2 == 0) {tablets2="0";}
+else if (weight2 < 10) {alert("Child 2: This product is not licensed for children under 10kg, Please phone TravelPharm for advice as this product may still be suitable")}
+else if (weight2 < 20) {tablets2="1";}
+else if (weight2 < 30) {tablets2="2";}
+else if (weight2 < 40) {tablets2="3";}
+else {alert("Child 3: This product is only suitable for children up to 39.9kg.  If your child is 40kg or over they will need the adult Atovaquone/Proguanil 250/125mg");}
+
+total2= (days+9)*tablets2;
+return total2;
+}
+
+function malapaed3(){
+
+var weight3, spares, days, tablets3
+weight3 = Number(document.getElementById("weight3").value);
+days = Number(document.getElementById("days").value);
+
+// not suitable for all weights so if statement to alert fro low and high ranges with number of tablets needed assigned to the tablets variable in the statement
+
+if (weight3 == 0) {tablets3="0";}
+else if (weight3 < 10) {alert("This product is not licensed for children under 10kg, Please phone TravelPharm for advice as this product may still be suitable")}
+else if (weight3 < 20) {tablets3="1";}
+else if (weight3 < 30) {tablets3="2";}
+else if (weight3 < 40) {tablets3="3";}
+else {alert("This product is only suitable for children up to 39.9kg.  If your child is 40kg or over they will need the adult Atovaquone/Proguanil 250/125mg");}
+
+total3= (days+9)*tablets3;
+return total3;
+}
+
+function malapaed4(){
+
+var weight4, spares, days, tablets4
+weight4 = Number(document.getElementById("weight4").value);
+days = Number(document.getElementById("days").value);
+
+// not suitable for all weights so if statement to alert fro low and high ranges with number of tablets needed assigned to the tablets variable in the statement
+
+if (weight4 == 0) {tablets4="0";}
+else if (weight4 < 10) {alert("This product is not licensed for children under 10kg, Please phone TravelPharm for advice as this product may still be suitable")}
+else if (weight4 < 20) {tablets4="1";}
+else if (weight4 < 30) {tablets4="2";}
+else if (weight4 < 40) {tablets4="3";}
+else {alert("This product is only suitable for children up to 39.9kg.  If your child is 40kg or over they will need the adult Atovaquone/Proguanil 250/125mg");}
+
+total4= (days+9)*tablets4;
+return total4;
+}
+
+//each function now called and added together.  Doesn't matter if null values as they will resolve to 0
+
+function total(){ 
+  var total, spares
+
+  spares = Number(document.getElementById("spares").value);
+
+  total = malapaed1() + malapaed2() + malapaed3() + malapaed4()-spares;
+  document.getElementById("answer").value=Math.ceil(total); 
+}
+
+function hideStuff(id) {
+    document.getElementById('weight2').style.display = 'none';
+    document.getElementById('weight3').style.display = 'none';
+    document.getElementById('weight4').style.display = 'none';
+    document.getElementById('weight1').style.display = 'none';
+}
+
+function checkType(selectedType) {
+
+if (selectedType == '1child') {
+    document.getElementById('1childDiv').style.display = 'block';
+    document.getElementById('2childDiv').style.display = 'none';
+    document.getElementById('3childDiv').style.display = 'none';
+    document.getElementById('4childDiv').style.display = 'none';
+} 
+else if (selectedType == '2child') {
+    document.getElementById('1childDiv').style.display = 'block';
+    document.getElementById('2childDiv').style.display = 'block';
+    document.getElementById('3childDiv').style.display = 'none';
+    document.getElementById('4childDiv').style.display = 'none';
+}
+else if (selectedType == '3child') {
+    document.getElementById('1childDiv').style.display = 'block';
+    document.getElementById('2childDiv').style.display = 'block';
+    document.getElementById('3childDiv').style.display = 'block';
+    document.getElementById('4childDiv').style.display = 'none';
+    }
+else {
+    document.getElementById('1childDiv').style.display = 'block';
+    document.getElementById('2childDiv').style.display = 'block';
+    document.getElementById('3childDiv').style.display = 'block';
+    document.getElementById('4childDiv').style.display = 'block';
+}
+}
+
+function refreshpage() {
+  location.reload();
 }
 
 </script>
 
 <link rel="stylesheet" type="text/css" href="style1.css">
 </head>
-<h1>
-  <a href= "http://www.travelpharm.com">
-  <img src="TPlogo.png" alt="TPlogo" width="360" height="110">
-</a>
-</h1>
+
 <h2>
-Malarone Paediatric Calculator
+Childrens (Paediatric) Malarone Tablet Calculator
 </h2>
-<body>
-<p>Weight of child (kg): <input id="weight"></p>
-<p>Number of consecutive days at risk?: <input id="days"></P>
-<p>Do you have any spare capsules, if so how many?: <input id="spares"></p>
-<button onclick="malpaed()">You need to order:</button>
-<input id="answer">tablets
-</p>
-<a href="index.html">Home</a>
+
+<input type="radio" name="Type" value="1child" onclick="checkType(this.value)" />1 Child
+<input type="radio" name="Type" value="2child" onclick="checkType(this.value)" />2 Child
+<input type="radio" name="Type" value="3child" onclick="checkType(this.value)" />3 Child
+<input type="radio" name="Type" value="4child" onclick="checkType(this.value)" />4 Child
+<br />
+<br>
+
+<div id="1childDiv" style="display:none;">
+    <div class="form-group">
+        <input type="text" id="weight1" placeholder="Weight of Child 1 in Kg">
+        <label for="weight1">Weight of Child 1 in Kg</label>
+    </div>
+  </div>
+  <div id="2childDiv" style="display:none;">
+    <div class="form-group">
+    <input type="text"  id="weight2" placeholder="Weight of Child 2 in Kg">
+    <label for="weight2">Weight of Child 2 in Kg</label>
+    </div>
+  </div>
+    <div id="3childDiv" style="display:none;">
+    <div class="form-group">
+        <input type="text"  id="weight3" placeholder="Weight of Child 3  in Kg">
+        <label for="weight3">Weight of Child 3 in Kg</label>
+    </div>
+  </div>
+  <div id="4childDiv" style="display:none;">
+    <div class="form-group">
+        <input type="text"  id="weight4" placeholder="Weight of Child 4  in Kg">
+        <label for="weight4">Weight of Child 4 in Kg</label>
+    </div>
+  </div>   
+</div>
+
+
+<div class="form-group">
+    <input type="text" id="days" placeholder="Number of Consecutive Days at Risk?">
+    <label for="days">Number of Consecutive Days at Risk?</label>
+    </div>
+
+<div class="form-group">
+    <input type="text" id="spares" placeholder="Do you have any Spare Tablets, if so how many?">
+    <label for="spares">Do you Have any Spare Tablets, if so how many?</label>
+</div>
+
+<br>
+
+<button class = "button" onclick="total()">Calculate:</button>
+<button class = "button" onclick="refreshpage()">Reset:</button>
+
+<br>
+<br>
+<br>
+
+<div class="form-group">
+    <input type="text" id="answer" placeholder="You Need to Order ....">
+    <label for="answer">You Need to Order ...</label>
+</div>
+
 </body>
 </html>

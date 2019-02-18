@@ -1,6 +1,9 @@
 <!doctype html>
-<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
+
+
 <script>
 function add(){
 var a,b,c;
@@ -8,28 +11,51 @@ a=Number(document.getElementById("people").value);
 b=Number(document.getElementById("time").value);
 c=Number(document.getElementById("spares").value);
 d=Math.ceil(b+9)*a-c;
-document.getElementById("answer").value=d
-;
+document.getElementById("answer").value=d + " tablets";
 }
-</script>
-    <link rel="stylesheet" type="text/css" href="style1.css">
-<body>
-  <a href= "http://www.travelpharm.com">
-    <img src="TPlogo.png" alt="TPlogo" width="360" height="110">
-  </a>
-</head>
-<h2>
-Malarone (Atovaquone/Proguanil) Calculator
-</h2>
-<body>
-<p>Number of people over 40kg travelling: <input id="people"></p>
-<p>Number of consecutive days at risk?: <input id="time"></P>
-<p>Do you have any spare tablets, if so how many?: <input id="spares"></p>
-<button onclick="add()">You need to order:</button>
-<input id="answer">tablets
-</p>
 
-<a href="index.html">Home</a>
+function refreshpage() {
+  location.reload();
+}
+
+</script>
+
+    <link rel="stylesheet" type="text/css" href="style1.css">
+
+</head>
+
+<h2>
+Malarone Tablet Calculator
+</h2>
+
+<div class="form-group">
+    <input type="text" id="people" placeholder="Number of People Over 40kg">
+    <label for="people">Number of People Over 40kg</label>
+</div>
+
+<div class="form-group">
+    <input type="text" id="time" placeholder="Number of Consecutive Days at Risk?">
+    <label for="time">Number of Consecutive Days at Risk?</label>
+    </div>
+<div class="form-group">
+    <input type="text" id="spares" placeholder="Do you have any Spare Tablets, if so how many?">
+    <label for="spares">Do you Have any Spare Tablets, if so how many?</label>
+</div>
+
+<br>
+
+<Button class = "button" onclick="add()">Calculate:</button>
+<button class = "button" onclick="refreshpage()">Reset:</button>
+
+<br>
+<br>
+<br>
+
+<div class="form-group">
+    <input type="text" id="answer" placeholder="You Need to Order ....">
+    <label for="answer">You Need to Order ...</label>
+</div>
+
 
 </body>
 </html>
