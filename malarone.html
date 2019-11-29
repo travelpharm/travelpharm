@@ -20,36 +20,52 @@ function refreshpage() {
 
 </script>
 
-    <link rel="stylesheet" type="text/css" href="style1.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 
 </head>
+
 <body>
+<form>
+
 <div class="form-group">
-    <input type="text" id="people" placeholder="Number of People Over 40kg">
-    <label for="people">Number of People Over 40kg</label>
+    <input type="text" class="form-control" id="people" placeholder="Number of People Over 40kg">
+    <label for="people"></label>
 </div>
 
 <div class="form-group">
-    <input type="text" id="time" placeholder="Number of Consecutive Days at Risk?">
-    <label for="time">Number of Consecutive Days at Risk?</label>
-    </div>
+    <input type="text" class="form-control" id="time" placeholder="Number of Consecutive Days at Risk?">
+    <label for="time"></label>
+</div>
 <div class="form-group">
-    <input type="text" id="spares" placeholder="Number of spare tablets from previous trips you have??">
-    <label for="spares">Number of spare tablets from previous trips you have?</label>
+    <input type="text" class="form-control" id="spares" placeholder="Number of spare tablets from previous trips you have??">
+    <label for="spares"></label>
+</div>
+</form>
+
+<br>
+
+<button type="button" class="btn btn-success" onclick="add()">Calculate:</button>
+<button type="button" class="btn btn-danger" onclick="refreshpage()">Reset:</button>
+
+<br>
+<br>
+<br>
+
+<div class="form-group">
+    <input type="text" class="form-control" id="answer" placeholder="You Need to Order ....">
+    <label for="answer"></label>
 </div>
 
-<br>
-
-<Button class = "button" onclick="add()">Calculate:</button>
-<button class = "button" onclick="refreshpage()">Reset:</button>
-
-<br>
-<br>
-<br>
-
-<div class="form-group">
-    <input type="text" id="answer" placeholder="You Need to Order ....">
-    <label for="answer">You Need to Order ...</label>
-</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
