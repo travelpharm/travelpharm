@@ -1,6 +1,11 @@
 <!doctype html>
 <html>
 <head>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <script>
 function add(){
 var a,b,c;
@@ -15,27 +20,46 @@ else if (a < 45) {tablets="0.75";}
 else {tablets="1";}
 
 d=((b+38)/7)*tablets-c;
-document.getElementById("answer").value= Math.ceil(d)
+document.getElementById("answer").value= Math.ceil(d) +" tablets"
 ;
 }
 </script>
-    <link rel="stylesheet" type="text/css" href="style1.css">
+
 </head>
+
 <body>
-  <a href= "http://www.travelpharm.com">
-    <img src="TPlogo.png" alt="TPlogo" width="360" height="110">
-  </a>
-</head>
-<h2>
-Lariam Tablet Calculator
-</h2>
-<body>
-<p>Weight of traveller (kg) <input id="weight"></p>
-<p>Number of consecutive days at risk?: <input id="time"></P>
-<p>Do you have any spare tablets, if so how many?: <input id="spares"></p>
-<button onclick="add()">You need to order:</button>
-<input id="answer">tablets
-</p>
-<a href="index.html">Home</a>
+
+    <form>
+
+        <div class="form-group">
+            <input type="text" class="form-control" id="weight" placeholder="Weight of traveller (kg)">
+            <label for="weight"></label>
+        </div>
+        
+        <div class="form-group">
+            <input type="text" class="form-control" id="time" placeholder="Number of Consecutive Days at Risk?">
+            <label for="time"></label>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="spares" placeholder="Do you have any spare tablets, if so how many?">
+            <label for="spares"></label>
+        </div>
+        
+
+        <button type="button" class="btn btn-success" onclick="add()">Calculate:</button>
+        <button type="button" class="btn btn-danger" onclick="refreshpage()">Reset:</button>
+
+<br>
+<br>
+<br>
+
+<div class="form-group">
+    <input type="text" class="form-control" id="answer" placeholder="You Need to Order ....">
+    <label for="answer"></label>
+</div>
+
+        </form>
+
+
 </body>
 </html>
