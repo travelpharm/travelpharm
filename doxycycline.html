@@ -1,31 +1,68 @@
 <html>
+
 <head>
-<script>
-function add(){
-var a,b,c;
-a=Number(document.getElementById("people").value);
-b=Number(document.getElementById("time").value);
-c=Number(document.getElementById("spares").value);
-d=Math.ceil(b+30)*a-c;
-document.getElementById("answer").value=d
-;
-}
-</script>
-<link rel="stylesheet" type="text/css" href="style1.css">
-<a href= "http://www.travelpharm.com">
-  <img src="TPlogo.png" alt="TPlogo" width="360" height="110">
-</a>
-  </head>
-<h2>
-Doxycycline Capsule Calculator
-</h2>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script>
+    function add() {
+      var a, b, c;
+      a = Number(document.getElementById("people").value);
+      b = Number(document.getElementById("time").value);
+      c = Number(document.getElementById("spares").value);
+      d = Math.ceil(b + 30) * a - c;
+
+      document.getElementById("answer").value = d + " capsules"
+        ;
+    }
+  </script>
+
+</head>
+
+
 <body>
-<p>Number of people (over 12 years old) travelling: <input id="people"></p>
-<p>Number of consecutive days at risk?: <input id="time"></P>
-<p>Do you have any spare capsules, if so how many?: <input id="spares"></p>
-<button onclick="add()">You need to order:</button>
-<input id="answer"> capsules
-</p>
-<a href="index.html">Home</a>
+  <form>
+    <div class="form-group">
+      <input type="text" class="form-control" id="people" placeholder="Number of people (over 12 years old) travelling">
+      <label for="people"></label>
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" id="time" placeholder="Number of consecutive days at risk?"> <label
+        for="time"></label>
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" id="spares" placeholder="Do you have any spare capsules, if so how many?">
+      <label for="spares"></label>
+    </div>
+
+
+    <button type="button" class="btn btn-success" onclick="add()">Calculate</button>
+    <button type="button" class="btn btn-danger" onclick="refreshpage()">Reset:</button>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="form-group">
+        <input type="text" class="form-control" id="answer" placeholder="You Need to Order ....">
+        <label for="answer"></label>
+    </div>
+
+
+  </form>
+
 </body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </html>
