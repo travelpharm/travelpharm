@@ -134,70 +134,84 @@ function refreshpage() {
 
 </script>
 
-<link rel="stylesheet" type="text/css" href="style1.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
+
 <body>
 <h2>
 Childrens (Paediatric) Malarone Tablet Calculator
 </h2>
+
 Number of Children under 40Kg: <br><br>
-<input type="radio" name="Type" value="1child" onclick="checkType(this.value)" checked/>1 Child
-<input type="radio" name="Type" value="2child" onclick="checkType(this.value)" />2 Children
-<input type="radio" name="Type" value="3child" onclick="checkType(this.value)" />3 Children
-<input type="radio" name="Type" value="4child" onclick="checkType(this.value)" />4 Children
+<input type="radio" name="Type" value="1child" onclick="checkType(this.value)" checked/> 1 Child
+<input type="radio" name="Type" value="2child" onclick="checkType(this.value)" /> 2 Children
+<input type="radio" name="Type" value="3child" onclick="checkType(this.value)" /> 3 Children
+<input type="radio" name="Type" value="4child" onclick="checkType(this.value)" /> 4 Children
 <br />
 <br>
 
 <div id="1childDiv">
     <div class="form-group">
-        <input type="text" id="weight1" placeholder="Weight of Child 1 in Kg">
-        <label for="weight1">Weight of Child 1 in Kg</label>
+        <input type="text" class="form-control" id="weight1" placeholder="Weight of Child 1 in Kg">
+        <label for="weight1"></label>
     </div>
   </div>
   <div id="2childDiv" style="display:none;">
     <div class="form-group">
-    <input type="text"  id="weight2" placeholder="Weight of Child 2 in Kg">
-    <label for="weight2">Weight of Child 2 in Kg</label>
+    <input type="text" class="form-control"  id="weight2" placeholder="Weight of Child 2 in Kg">
+    <label for="weight2"></label>
     </div>
   </div>
     <div id="3childDiv" style="display:none;">
     <div class="form-group">
-        <input type="text"  id="weight3" placeholder="Weight of Child 3  in Kg">
-        <label for="weight3">Weight of Child 3 in Kg</label>
+        <input type="text" class="form-control"  id="weight3" placeholder="Weight of Child 3  in Kg">
+        <label for="weight3"></label>
     </div>
   </div>
   <div id="4childDiv" style="display:none;">
     <div class="form-group">
-        <input type="text"  id="weight4" placeholder="Weight of Child 4  in Kg">
-        <label for="weight4">Weight of Child 4 in Kg</label>
+        <input type="text" class="form-control"  id="weight4" placeholder="Weight of Child 4  in Kg">
+        <label for="weight4"></label>
     </div>
   </div>   
 </div>
 
 
 <div class="form-group">
-    <input type="text" id="days" placeholder="Number of Consecutive Days at Risk?">
-    <label for="days">Number of Consecutive Days at Risk?</label>
+    <input type="text" class="form-control" id="days"  placeholder="Number of Consecutive Days at Risk?">
+    <label for="days"></label>
     </div>
 
 <div class="form-group">
-    <input type="text" id="spares" placeholder="Number of spare tablets from previous trips?">
-    <label for="spares">Number of spare tablets from previous trips?</label>
+    <input type="text" class="form-control" id="spares" placeholder="Number of spare tablets from previous trips?">
+    <label for="spares"></label>
 </div>
 
 <br>
 
-<button class = "button" onclick="total()">Calculate:</button>
-<button class = "button" onclick="refreshpage()">Reset:</button>
+<button type="button" class="btn btn-success" onclick="total()">Calculate:</button>
+<button type="button" class="btn btn-danger" onclick="refreshpage()">Reset:</button>
 
 <br>
 <br>
 <br>
 
 <div class="form-group">
-    <input type="text" id="answer" placeholder="You Need to Order ....">
-    <label for="answer">You Need to Order ...</label>
+    <input type="text" class="form-control" id="answer" placeholder="You Need to Order ....">
+    <label for="answer"></label>
 </div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
