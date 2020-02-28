@@ -13,10 +13,7 @@ a=Number(document.getElementById("weight").value);
 b=Number(document.getElementById("time").value);
 c=Number(document.getElementById("spares").value);
 
-if (a < 6) {alert("This product is not licensed for children under 6kg, Please phone TravelPharm for specialist advice")}
-else if (a < 16) {tablets="0.25";}
-else if (a < 25) {tablets="0.5";}
-else if (a < 45) {tablets="0.75";}
+if (a < 45) {alert("Please phone TravelPharm for specialist advice as this product may still be suitable. Tel: 01159 512092")}
 else {tablets="1";}
 
 d=((b+38)/7)*tablets-c;
