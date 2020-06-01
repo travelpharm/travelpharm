@@ -1,19 +1,22 @@
- {
- "country": [
-       { "Ghana" : {
-            "malaria risk" : "High",
-            "url": "https://www.travelhealthpro.org",
-            "drug choice": {
-                "Drug1":"AP",
-                "Drug2":"Doxy",
-                "Drug3":"Lariam"
-                }
-            }
+{
+    "malaria": [
+        {
+            "country": "Clark",
+            "risk": "Kent",
+            "drug1": "Reporter",
+            "drug2": 20
+        },
+        {
+            "country": "Bruce",
+            "risk": "Wayne",
+            "drug1": "Playboy",
+            "drug2": 30
+        },
+        {
+            "country": "Peter",
+            "risk": "Parker",
+            "drug1": "Photographer",
+            "drug2": 40
         }
- ]
-    
-
-}
-
-
-
+    ]
+ }
