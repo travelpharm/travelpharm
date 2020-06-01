@@ -1,0 +1,19 @@
+var malaria = {
+
+    "country": {
+        "Ghana" : {
+            "malaria risk" : "High",
+            "url": "https://www.travelhealthpro.org",
+            "drug choice": {
+                "Drug1":"AP",
+                "Drug2":"Doxy",
+                "Drug3":"Lariam"
+                }
+            }
+        }
+    
+
+}
+
+
+
