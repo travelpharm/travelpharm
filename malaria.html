@@ -8,7 +8,8 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
 <script>
 
@@ -18,7 +19,7 @@
    var malaria = [];
 
    $.getJSON('malaria.json', function(data) {
-       $.each(data.country, function(i, f) {
+       $.each(data.malaria, function(i, f) {
           var tblRow = "<tr>" + "<td>" + f.country + "</td>" +
            "<td>" + f.country[malaria_risk] + "</td>" + "<td>" + f.country[drug1] + "</td>" + "<td>" + f.country[drug2] + "</td>" + "</tr>"
            $(tblRow).appendTo("#userdata tbody");
@@ -48,6 +49,7 @@
 
 
 
+<script type="text/javascript" src="malaria.json"></script>>
   
 
 

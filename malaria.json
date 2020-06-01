@@ -1,7 +1,6 @@
-var malaria = {
-
-    "country": {
-        "Ghana" : {
+ {
+ "country": [
+       { "Ghana" : {
             "malaria risk" : "High",
             "url": "https://www.travelhealthpro.org",
             "drug choice": {
@@ -11,6 +10,7 @@ var malaria = {
                 }
             }
         }
+ ]
     
 
 }
