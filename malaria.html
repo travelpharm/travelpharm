@@ -19,7 +19,7 @@
    var malaria = [];
 
    $.getJSON('malaria.json', function(data) {
-       $.each(data.country, function(i, f) {
+       $.each(data.malaria, function(i, f) {
           var tblRow = "<tr>" + "<td>" + f.country + "</td>" +
            "<td>" + f.malariaRisk + "</td>" + "<td>" + f.drug1 + "</td>" + "<td>" + f.drug2 + "</td>" + "</tr>"
            $(tblRow).appendTo("#userdata tbody");
