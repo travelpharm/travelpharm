@@ -4,6 +4,12 @@
 
 <head>
 <script>
+
+var tablets = 0
+var tablets2 = 0
+var tablets3 = 0
+var tablets4 = 0
+
 //function malpaed works out number of tablets needed for a holiday
 function malapaed1(){
 
@@ -23,6 +29,9 @@ else {alert("Child 1: This product is only suitable for children up to 39.9kg.  
 
 total1= (days+9)*tablets;
 return total1;
+
+
+
 }
 
 function malapaed2(){
@@ -61,6 +70,7 @@ else {alert("Child 3: This product is only suitable for children up to 39.9kg.  
 
 total3= (days+9)*tablets3;
 return total3;
+
 }
 
 function malapaed4(){
@@ -92,11 +102,13 @@ function total(){
   spares = Number(document.getElementById("spares").value);
 
   total = malapaed1() + malapaed2() + malapaed3() + malapaed4()-spares;
-  document.getElementById("answer").value=Math.ceil(total); 
-  document.getElementById("child1").innerHTML = "Child 1 requires" total1 + "tablets";
-  document.getElementById("child2").innerHTML = "Child 2 requires"total2 + "tablets";
-  document.getElementById("child3").innerHTML = "Child 3 requires"total3 + "tablets";
-  document.getElementById("child4").innerHTML = "Child 4 requires"total4 + "tablets";
+  document.getElementById("answer").value=Math.ceil(total) + " tablets"; 
+
+  document.getElementById("child1").innerHTML = "Child 1 requires " + total1 + " tablets " ;
+  if (total2 != 0) {document.getElementById("child2").innerHTML = "Child 2 requires " + total2 + " tablets " ;}
+  if (total3 != 0) {document.getElementById("child3").innerHTML = "Child 3 requires " + total3 + " tablets";}
+  if (total4 != 0) {document.getElementById("child4").innerHTML = "Child 4 requires " + total4 + " tablets";}
+  
   
 }
 
@@ -193,12 +205,13 @@ Number of Children under 40Kg: <br><br>
     <label for="spares"></label>
 </div>
 
-<br>
+
 
 <button type="button" class="btn btn-success" onclick="total()">Calculate:</button>
 <button type="button" class="btn btn-danger" onclick="refreshpage()">Reset:</button>
 
 
+<br>
 <br>
 
 <div class="form-group">
