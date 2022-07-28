@@ -80,6 +80,8 @@ else {alert("Child 4: This product is only suitable for children up to 39.9kg.  
 
 total4= (days+9)*tablets4;
 return total4;
+  
+ 
 }
 
 //each function now called and added together.  Doesn't matter if null values as they will resolve to 0
@@ -91,6 +93,11 @@ function total(){
 
   total = malapaed1() + malapaed2() + malapaed3() + malapaed4()-spares;
   document.getElementById("answer").value=Math.ceil(total); 
+  document.getElementById("child1").innerHTML = "Child 1 requires" total1 + "tablets";
+  document.getElementById("child2").innerHTML = "Child 2 requires"total2 + "tablets";
+  document.getElementById("child3").innerHTML = "Child 3 requires"total3 + "tablets";
+  document.getElementById("child4").innerHTML = "Child 4 requires"total4 + "tablets";
+  
 }
 
 function hideStuff(id) {
@@ -199,6 +206,13 @@ Number of Children under 40Kg: <br><br>
     <input type="text" class="form-control" id="answer" placeholder="You Need to Order ....">
     <label for="answer"></label>
 </div>
+
+<div id = "child1"></div>
+<div id = "child2"></div>
+<div id = "child3"></div>
+<div id = "child4"></div>
+
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
